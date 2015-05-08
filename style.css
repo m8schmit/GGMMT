@@ -1,0 +1,78 @@
+body {
+  background-color: #f9f9f9;
+  font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  margin-left: auto;
+  margin-right: auto;
+  width:1050px;
+}
+
+h1 {
+	font-size: 25px;
+} 
+
+h2 {
+	font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+	padding: 0px;
+	text-align: left;
+}
+
+input[type=text] {
+width: 180px;
+border: thin solid #dbdbea;
+background-color: #fff;
+padding: 3px;
+border-radius: 3px;
+margin-left: 15px;
+margin-bottom: 20px;
+}
+
+.headerdiv {
+	background-color: #009688;
+	color: #fff;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 30px;
+}
+
+.primarydiv {
+	border: dashed thin grey;
+	padding: 0 0 13px 15;
+	width: 500px;
+	margin-bottom:	5px;
+}
+
+.footerdiv {
+	width:	1050px;
+	display: inline-block;
+}
+select {
+  border: 1px solid #111;
+  background: transparent;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(img/down-arrow.png) 96% / 15% no-repeat #eee;
+}
+/*target Internet Explorer 9 and Internet Explorer 10:*/
+
+@media screen and (min-width: 0\0) {
+  select {
+    background: none;
+    padding: 5px;
+  }
+}
