@@ -7,9 +7,17 @@
 	}
 	$res = $mysqli->query("	SELECT * 
 							FROM ".$_POST['gname']."
-							LIMIT 0 , 100");
+							LIMIT 0 , 1000");
+	$flag = 0;
 	while ($row = $res->fetch_assoc()) {
-		$dataTable .= "<li><INPUT type=\"checkbox\" name='".$row['ID']."' >Titre activité : '".$row['activity']."', Début : '".$row['Hbegin'].":".$row['Mbegin'].":".$row['Sbegin']."',  Fin : '".$row['Hend'].":".$row['Mend'].":".$row['Send']."'</li>";
+		if ($flag == 0)  {
+			$dataTable .= "<li style=\"background-color: lightgray;\"><INPUT type=\"checkbox\" name='".$row['ID']."' >Titre activité : '".$row['activity']."', Début : '".$row['Hbegin'].":".$row['Mbegin'].":".$row['Sbegin']."',  Fin : '".$row['Hend'].":".$row['Mend'].":".$row['Send']."'</li>";
+			$flag = 1;
+		}
+		else {
+			$dataTable .= "<li><INPUT type=\"checkbox\" name='".$row['ID']."' >Titre activité : '".$row['activity']."', Début : '".$row['Hbegin'].":".$row['Mbegin'].":".$row['Sbegin']."',  Fin : '".$row['Hend'].":".$row['Mend'].":".$row['Send']."'</li>";
+			$flag = 0;
+		}
 	}	
 	echo utf8_encode($dataTable);
 ?>
